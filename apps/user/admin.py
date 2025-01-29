@@ -30,5 +30,11 @@ class AddressAdmin(admin.ModelAdmin):
     readonly_fields = ['created_at', 'updated_at']
 
 
-admin.site.register(User)
+@admin.register(User)
+class UserAdmin(admin.ModelAdmin):
+    list_display = ['phone','get_full_name', 'is_active', 'is_staff', 'is_superuser']
+    list_display_links = ['phone']
+    list_filter = ['is_active', 'is_superuser']
+    search_fields = ['phone',]
+
 admin.site.register(SMS, SMSAdmin)

@@ -103,7 +103,7 @@ class ProductAdmin(admin.ModelAdmin):
         (
             None,
             {
-                "fields": ["images", "category",("price", "discount", "discounted_price"), "count", "is_active", "spu", "tags"],
+                "fields": ["images", "category", "price", ("discount", "discounted_price"), "count", "is_active", "spu", "tags"],
                 "classes": ["wide", "extrapretty"],
             }
         ),

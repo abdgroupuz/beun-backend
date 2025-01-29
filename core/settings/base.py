@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import environ
 from pathlib import Path
-
+from django.utils.translation import gettext_lazy as _
+from .jazzmin import JAZZMIN_SETTINGS
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -34,6 +35,7 @@ ALLOWED_HOSTS = env('ALLOWED_HOSTS').split(' ')
 # Application definition
 
 INSTALLED_APPS = [
+    "jazzmin",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,6 +48,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     'django_filters',
+    'drf_yasg',
 
     # Local apps
     'apps.feedback.apps.FeedbackConfig',
@@ -63,6 +66,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -115,6 +119,14 @@ USE_I18N = True
 
 USE_TZ = True
 
+LANGUAGES = [
+    ('uz', _("Uzbek")),
+    ('ru', _("Russion")),
+]
+
+LOCALE_PATHS = (
+    BASE_DIR / 'locale',
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
@@ -122,7 +134,9 @@ USE_TZ = True
 AUTH_USER_MODEL = 'user.User'
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'static'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
