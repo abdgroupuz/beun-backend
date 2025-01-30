@@ -29,7 +29,7 @@ class Star(models.Model):
     image = models.ImageField(upload_to="starts/")
     full_name_uz = models.CharField(max_length=255)
     full_name_ru = models.CharField(max_length=255)
-    is_actve = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
