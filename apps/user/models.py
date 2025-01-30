@@ -203,7 +203,7 @@ class SMS(models.Model):
     """
     A model to store SMS messages sent to users.
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    phone = models.CharField(_("phone"), max_length=13)
     code = models.CharField(_("message"), max_length=10)
     updated_at = models.DateTimeField(_("created at"), auto_now=True)
 
@@ -212,7 +212,7 @@ class SMS(models.Model):
         verbose_name_plural = _("SMS Codes")
 
     def __str__(self):
-        return f"SMS to {self.user.phone} at {self.updated_at.strftime('%Y-%m-%d %H:%M:%S')}"
+        return f"SMS to {self.phone} at {self.updated_at.strftime('%Y-%m-%d %H:%M:%S')}"
 
 
 class Address(models.Model):
