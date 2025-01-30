@@ -134,6 +134,7 @@ LOCALE_PATHS = (
 AUTH_USER_MODEL = 'user.User'
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
