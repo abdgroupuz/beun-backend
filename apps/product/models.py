@@ -33,7 +33,7 @@ class Image(models.Model):
     status = models.TextField(choices=STATUS_CHOICES, max_length=1)
 
     def __str__(self):
-        return self.pk + ' ' + self.status
+        return str(self.pk) + ' ' + self.status
 
 
 class Product(models.Model):
