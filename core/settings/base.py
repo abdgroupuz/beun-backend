@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     'drf_yasg',
+    'payme',
+    'click_up',
 
     # Local apps
     'apps.feedback.apps.FeedbackConfig',
@@ -174,3 +176,16 @@ CORS_ORIGIN_WHITELIST = (
     'http://127.0.0.1:3000',
     'http://127.0.0.1:3001',
 )
+
+PAYME_ID = env("PAYME_ID")
+PAYME_KEY = env("PAYME_KEY")
+PAYME_ACCOUNT_FIELD = "order_id"
+PAYME_AMOUNT_FIELD = "amount"
+PAYME_ACCOUNT_MODEL = "apps.market.models.Order"
+PAYME_ONE_TIME_PAYMENT = True
+
+CLICK_SERVICE_ID = env("CLICK_SERVICE_ID")
+CLICK_MERCHANT_ID = env("CLICK_MERCHANT_ID")
+CLICK_SECRET_KEY = env("CLICK_SECRET_KEY")
+CLICK_ACCOUNT_MODEL = "apps.market.models.Order"
+CLICK_AMOUNT_FIELD = "total_price"

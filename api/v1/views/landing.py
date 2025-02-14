@@ -1,7 +1,15 @@
-from rest_framework.viewsets import ReadOnlyModelViewSet
+from rest_framework.viewsets import ReadOnlyModelViewSet, ViewSet
+from rest_framework.mixins import ListModelMixin
 
-from api.v1.serializers.landing import CertificateSerializer, FaqSerializer, PostSerializer, ResultSerializer, StarSerializer
-from apps.landing.models import Certificate, Faq, Post, Result, Star
+from api.v1.serializers.landing import (
+    CertificateSerializer,
+    FaqSerializer,
+    PostSerializer,
+    ResultSerializer,
+    StarSerializer,
+    BannerSerializer,
+)
+from apps.landing.models import Certificate, Faq, Post, Result, Star, Banner
 
 
 class CertificateViewSet(ReadOnlyModelViewSet):
@@ -27,3 +35,8 @@ class ResultViewSet(ReadOnlyModelViewSet):
 class StarViewSet(ReadOnlyModelViewSet):
     queryset = Star.objects.all()
     serializer_class = StarSerializer
+
+
+class BannerViewSet(ViewSet, ListModelMixin):
+    queryset = Banner.objects.all()
+    serializer_class = BannerSerializer

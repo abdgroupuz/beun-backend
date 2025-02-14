@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import FileExtensionValidator
 
 # Create your models here.
 
@@ -47,6 +48,42 @@ class Faq(models.Model):
     question_ru = models.TextField()
     answer_uz = models.TextField()
     answer_ru = models.TextField()
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+
+class Banner(models.Model):
+    source = models.FileField(
+        upload_to="banners/",
+        validators=[
+            FileExtensionValidator(
+                allowed_extensions=["mp4", "webm", "mov", "jpg", "jpeg", "png", "gif"]
+            )
+        ],
+    )
+    source_md = models.FileField(
+        upload_to="banners/",
+        blank=True,
+        null=True,
+        validators=[
+            FileExtensionValidator(
+                allowed_extensions=["mp4", "webm", "mov", "jpg", "jpeg", "png", "gif"]
+            )
+        ],
+    )
+    source_sm = models.FileField(
+        upload_to="banners/",
+        blank=True,
+        null=True,
+        validators=[
+            FileExtensionValidator(
+                allowed_extensions=["mp4", "webm", "mov", "jpg", "jpeg", "png", "gif"]
+            )
+        ],
+    )
+    url = models.URLField(blank=True)
+    is_active = models.BooleanField(default=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
