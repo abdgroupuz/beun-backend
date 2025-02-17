@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
-from .models import Post, Certificate, Star, Result, Faq
+from .models import Post, Certificate, Star, Result, Faq, Banner
 
 # Register your models here.
 
@@ -112,6 +112,22 @@ class FaqAdmin(admin.ModelAdmin):
         (_('Russian'), {
             'fields': ('question_ru', 'answer_ru')
         }),    
+        (_('Date Information'), {
+            'fields': ('created_at', 'updated_at'),
+            'classes': ('collapse',)
+        }),
+    )
+
+@admin.register(Banner)
+class BannerAdmin(admin.ModelAdmin):
+    list_display = ['id', 'url', 'source', 'is_active']
+    list_editable = ['is_active']
+    readonly_fields = ['created_at', 'updated_at']
+    
+    fieldsets = (
+        (None, {
+            'fields': ('source', 'source_md', 'source_sm', 'url', 'is_active')
+        }),
         (_('Date Information'), {
             'fields': ('created_at', 'updated_at'),
             'classes': ('collapse',)
