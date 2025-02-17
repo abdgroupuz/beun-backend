@@ -1,3 +1,5 @@
+from django.db.models import Min, Max
+
 from rest_framework import serializers
 from apps.product.models import Product, Category, Image, Tag
 
@@ -15,13 +17,13 @@ class ImageSerializer(serializers.ModelSerializer):
 
 
 class CategorySerializer(serializers.ModelSerializer):
-    parent = serializers.SerializerMethodField()
+    childrens = serializers.SerializerMethodField()
 
-    def get_parent(self, obj):
-        if obj.parent:
-            return CategorySerializer(obj.parent).data
-        return {}
-
+    def get_childrens(self, obj):
+        if obj.childrens.exists():
+            return CategorySerializer(obj.childrens.all(), many=True).data
+        return []
+    
     class Meta:
         model = Category
         fields = "__all__"
