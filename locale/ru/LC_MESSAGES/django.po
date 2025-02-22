@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-29 16:39+0500\n"
+"POT-Creation-Date: 2025-02-22 16:31+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,152 +20,558 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\apps\product\admin.py:28 .\apps\product\admin.py:59
-#: .\apps\product\admin.py:90 .\core\settings\base.py:122
-msgid "Uzbek"
+#: .\api\v1\serializers\user.py:27 .\api\v1\serializers\user.py:66
+msgid "Phone number isn't allowed"
+msgstr "Номер телефона не разрешен"
+
+#: .\api\v1\serializers\user.py:34
+msgid "You can only request a code once a minute"
+msgstr "Вы можете запросить код только раз в минуту"
+
+#: .\api\v1\serializers\user.py:71 .\api\v1\serializers\user.py:86
+msgid "Validation code incorrect"
+msgstr "Неверный код проверки"
+
+#: .\api\v1\serializers\user.py:80
+msgid "Phone number not verified"
+msgstr "Номер телефона не подтвержден"
+
+#: .\api\v1\serializers\user.py:83
+msgid "Verification timed out"
+msgstr "Время проверки истекло"
+
+#: .\api\v1\views\user.py:27
+msgid "The verification code has been sent"
+msgstr "Код проверки отправлен"
+
+#: .\apps\feedback\models.py:10 .\apps\feedback\models.py:28
+#: .\apps\market\models.py:21 .\apps\market\models.py:39
+#: .\apps\user\models.py:176
+msgid "user"
+msgstr "пользователь"
+
+#: .\apps\feedback\models.py:11 .\apps\market\models.py:8
+#, fuzzy
+#| msgid "Product"
+msgid "product"
+msgstr "Продукт"
+
+#: .\apps\feedback\models.py:12
+msgid "reply to"
 msgstr ""
 
-#: .\apps\product\admin.py:34 .\apps\product\admin.py:65
-#: .\apps\product\admin.py:97
+#: .\apps\feedback\models.py:13
+msgid "rate"
+msgstr "оценка"
+
+#: .\apps\feedback\models.py:15 .\apps\feedback\models.py:31
+msgid "text"
+msgstr "текст"
+
+#: .\apps\feedback\models.py:16 .\apps\landing\models.py:19
+#: .\apps\landing\models.py:36 .\apps\landing\models.py:54
+#: .\apps\landing\models.py:68 .\apps\landing\models.py:84
+#: .\apps\landing\models.py:130 .\apps\market\models.py:49
+#: .\apps\product\models.py:11 .\apps\product\models.py:27
+#: .\apps\product\models.py:80 .\apps\user\models.py:208
+#: .\apps\user\models.py:227
+msgid "created at"
+msgstr "создано в"
+
+#: .\apps\feedback\models.py:17 .\apps\feedback\models.py:32
+#: .\apps\landing\models.py:20 .\apps\landing\models.py:37
+#: .\apps\landing\models.py:55 .\apps\landing\models.py:69
+#: .\apps\landing\models.py:85 .\apps\landing\models.py:131
+#: .\apps\market\models.py:50 .\apps\product\models.py:12
+#: .\apps\product\models.py:28 .\apps\product\models.py:81
+#: .\apps\user\models.py:228
+msgid "updated at"
+msgstr "обновлено в"
+
+#: .\apps\feedback\models.py:23
+msgid "Comment"
+msgstr "Комментарий"
+
+#: .\apps\feedback\models.py:24
+msgid "Comments"
+msgstr "Комментарии"
+
+#: .\apps\feedback\models.py:29 .\apps\user\models.py:141
+#: .\apps\user\models.py:206
+msgid "phone"
+msgstr "телефон"
+
+#: .\apps\feedback\models.py:30
+msgid "full name"
+msgstr "фамилия"
+
+#: .\apps\feedback\models.py:38
+msgid "Feedback"
+msgstr "Обратная связь"
+
+#: .\apps\feedback\models.py:39
+msgid "Feedbacks"
+msgstr "Обратная связь"
+
+#: .\apps\landing\admin.py:34
+msgid "Short Body"
+msgstr "Короткое тело"
+
+#: .\apps\landing\admin.py:38 .\apps\landing\admin.py:61
+#: .\apps\landing\admin.py:79 .\apps\landing\admin.py:117
+#: .\apps\product\admin.py:35 .\apps\product\admin.py:72
+#: .\apps\product\admin.py:141 .\core\settings\base.py:127
+msgid "Uzbek"
+msgstr "Узбекский"
+
+#: .\apps\landing\admin.py:39 .\apps\landing\admin.py:62
+#: .\apps\landing\admin.py:80 .\apps\landing\admin.py:118
+#: .\apps\product\admin.py:41 .\apps\product\admin.py:78
+#: .\apps\product\admin.py:148
 msgid "Russian"
+msgstr "Русский"
+
+#: .\apps\landing\admin.py:40 .\apps\landing\admin.py:63
+#: .\apps\landing\admin.py:81 .\apps\landing\admin.py:119
+#: .\apps\product\admin.py:47 .\apps\product\admin.py:84
+#: .\apps\product\admin.py:155 .\core\settings\base.py:129
+msgid "English"
+msgstr "Английский"
+
+#: .\apps\landing\admin.py:42 .\apps\landing\admin.py:65
+#: .\apps\landing\admin.py:83 .\apps\landing\admin.py:97
+#: .\apps\landing\admin.py:121 .\apps\landing\admin.py:136
+msgid "Date Information"
+msgstr "Информация о дате"
+
+#: .\apps\landing\admin.py:57
+msgid "Description"
+msgstr "Описание"
+
+#: .\apps\landing\models.py:9 .\apps\landing\models.py:31
+#: .\apps\landing\models.py:48 .\apps\landing\models.py:66
+#: .\apps\product\models.py:10
+msgid "image"
+msgstr "изображение"
+
+#: .\apps\landing\models.py:10
+msgid "short body uz"
+msgstr "Короткое тело"
+
+#: .\apps\landing\models.py:11
+msgid "short body ru"
+msgstr "Короткое тело"
+
+#: .\apps\landing\models.py:12
+msgid "short body en"
+msgstr "Короткое тело"
+
+#: .\apps\landing\models.py:13 .\apps\landing\models.py:32
+msgid "body uz"
+msgstr "тело (узб)"
+
+#: .\apps\landing\models.py:14 .\apps\landing\models.py:33
+msgid "body ru"
+msgstr "тело (рус)"
+
+#: .\apps\landing\models.py:15 .\apps\landing\models.py:34
+msgid "body en"
+msgstr "тело (англ)"
+
+#: .\apps\landing\models.py:16 .\apps\landing\models.py:127
+msgid "url"
+msgstr "URL"
+
+#: .\apps\landing\models.py:17 .\apps\landing\models.py:52
+#: .\apps\landing\models.py:128 .\apps\product\models.py:79
+msgid "is active"
+msgstr "активный"
+
+#: .\apps\landing\models.py:26
+msgid "Post"
+msgstr "Пост"
+
+#: .\apps\landing\models.py:27
+msgid "Posts"
+msgstr "Посты"
+
+#: .\apps\landing\models.py:43
+msgid "Certificate"
+msgstr "Сертификат"
+
+#: .\apps\landing\models.py:44
+msgid "Certificates"
+msgstr "Сертификаты"
+
+#: .\apps\landing\models.py:49
+msgid "full name uz"
+msgstr "полное имя (узб)"
+
+#: .\apps\landing\models.py:50
+msgid "full name ru"
+msgstr "полное имя (рус)"
+
+#: .\apps\landing\models.py:51
+msgid "full name en"
+msgstr "полное имя (англ)"
+
+#: .\apps\landing\models.py:61
+msgid "Star"
+msgstr "Звезда"
+
+#: .\apps\landing\models.py:62
+msgid "Stars"
+msgstr "Звезды"
+
+#: .\apps\landing\models.py:72
+msgid "Result"
+msgstr "Результат"
+
+#: .\apps\landing\models.py:73
+msgid "Results"
+msgstr "Результаты"
+
+#: .\apps\landing\models.py:77
+msgid "question uz"
+msgstr "вопрос (узб)"
+
+#: .\apps\landing\models.py:78
+msgid "question ru"
+msgstr "вопрос (рус)"
+
+#: .\apps\landing\models.py:79
+msgid "question en"
+msgstr "вопрос (англ)"
+
+#: .\apps\landing\models.py:80
+msgid "answer uz"
+msgstr "ответ (узб)"
+
+#: .\apps\landing\models.py:81
+msgid "answer ru"
+msgstr "ответ (рус)"
+
+#: .\apps\landing\models.py:82
+msgid "answer en"
+msgstr "ответ (англ)"
+
+#: .\apps\landing\models.py:91 .\apps\landing\models.py:92
+msgid "FAQ"
+msgstr "FAQ"
+
+#: .\apps\landing\models.py:97
+msgid "source"
+msgstr "источник"
+
+#: .\apps\landing\models.py:106
+msgid "source md"
+msgstr "источник (планш)"
+
+#: .\apps\landing\models.py:117
+msgid "source sm"
+msgstr "источник (смарт)"
+
+#: .\apps\landing\models.py:137
+msgid "Banner"
+msgstr "Баннер"
+
+#: .\apps\landing\models.py:138
+msgid "Banners"
+msgstr "Баннеры"
+
+#: .\apps\market\models.py:9 .\apps\product\models.py:75
+msgid "count"
+msgstr "количество"
+
+#: .\apps\market\models.py:10 .\apps\product\models.py:69
+msgid "price"
+msgstr "цена"
+
+#: .\apps\market\models.py:16
+msgid "Item"
+msgstr "Пункт"
+
+#: .\apps\market\models.py:17
+msgid "Items"
+msgstr "Пункты"
+
+#: .\apps\market\models.py:22 .\apps\market\models.py:40
+#, fuzzy
+#| msgid "Products"
+msgid "products"
+msgstr "Продукты"
+
+#: .\apps\market\models.py:28
+msgid "Cart"
+msgstr "Корзина"
+
+#: .\apps\market\models.py:29
+msgid "Carts"
+msgstr "Корзины"
+
+#: .\apps\market\models.py:41
+#, fuzzy
+#| msgid "price"
+msgid "total price"
+msgstr "цена"
+
+#: .\apps\market\models.py:42
+msgid "amount"
+msgstr "сумма"
+
+#: .\apps\market\models.py:43
+msgid "description"
+msgstr "Описание"
+
+#: .\apps\market\models.py:45
+msgid "delivery"
+msgstr "доставка"
+
+#: .\apps\market\models.py:46 .\apps\user\models.py:224
+msgid "address"
+msgstr "адрес"
+
+#: .\apps\market\models.py:47
+msgid "status"
+msgstr "статус персонала"
+
+#: .\apps\market\models.py:56
+#: .\venv\Lib\site-packages\django\forms\formsets.py:484
+#: .\venv\Lib\site-packages\django\forms\formsets.py:491
+msgid "Order"
+msgstr "Заказ"
+
+#: .\apps\market\models.py:57
+msgid "Orders"
+msgstr "Заказы"
+
+#: .\apps\product\admin.py:53 .\apps\product\admin.py:90
+#: .\apps\product\admin.py:178
+msgid "Date information"
+msgstr "Информация о дате"
+
+#: .\apps\product\models.py:7 .\apps\product\models.py:24
+#: .\apps\product\models.py:56
+msgid "name uz"
+msgstr "називания"
+
+#: .\apps\product\models.py:8 .\apps\product\models.py:25
+#: .\apps\product\models.py:57
+msgid "name ru"
+msgstr "називания"
+
+#: .\apps\product\models.py:9 .\apps\product\models.py:26
+#: .\apps\product\models.py:58
+msgid "name en"
+msgstr "називания"
+
+#: .\apps\product\models.py:13
+msgid "parent"
 msgstr ""
+
+#: .\apps\product\models.py:19 .\apps\product\models.py:66
+msgid "Category"
+msgstr "Категория"
+
+#: .\apps\product\models.py:20
+msgid "Categories"
+msgstr "Категории"
+
+#: .\apps\product\models.py:34
+msgid "Tag"
+msgstr "Тег"
+
+#: .\apps\product\models.py:35 .\apps\product\models.py:67
+msgid "Tags"
+msgstr "Теги"
+
+#: .\apps\product\models.py:43
+msgid "Product Image"
+msgstr "Изображение продукта"
+
+#: .\apps\product\models.py:44
+msgid "Product Image Status"
+msgstr "Статус изображения продукта"
+
+#: .\apps\product\models.py:50
+#: .\venv\Lib\site-packages\django\db\models\fields\files.py:420
+msgid "Image"
+msgstr "Изображение"
+
+#: .\apps\product\models.py:51 .\apps\product\models.py:73
+msgid "Images"
+msgstr "Изображения"
+
+#: .\apps\product\models.py:59
+msgid "short description uz"
+msgstr "краткое описание (узб)"
+
+#: .\apps\product\models.py:60
+msgid "short description ru"
+msgstr "краткое описание (рус)"
+
+#: .\apps\product\models.py:61
+msgid "short description en"
+msgstr "краткое описание (англ)"
+
+#: .\apps\product\models.py:62
+msgid "description uz"
+msgstr "Описание (узб)"
+
+#: .\apps\product\models.py:63
+msgid "description ru"
+msgstr "Описание (рус)"
+
+#: .\apps\product\models.py:64
+msgid "description en"
+msgstr "Описание (англ)"
+
+#: .\apps\product\models.py:70
+msgid "discount"
+msgstr "скидка"
+
+#: .\apps\product\models.py:71
+msgid "discounted price"
+msgstr "цена со скидкой"
+
+#: .\apps\product\models.py:76
+msgid "hit count"
+msgstr "количество просмотров"
+
+#: .\apps\product\models.py:77
+msgid "sold count"
+msgstr "количество проданных"
+
+#: .\apps\product\models.py:87
+msgid "Product"
+msgstr "Продукт"
+
+#: .\apps\product\models.py:88
+msgid "Products"
+msgstr "Продукты"
 
 #: .\apps\user\models.py:64
 msgid "superuser status"
-msgstr ""
+msgstr "статус суперпользователя"
 
 #: .\apps\user\models.py:67
 msgid ""
 "Designates that this user has all permissions without explicitly assigning "
 "them."
 msgstr ""
+"Указывает, что у этого пользователя есть все разрешения без явного "
+"назначения их."
 
 #: .\apps\user\models.py:73
 msgid "user permissions"
-msgstr ""
+msgstr "разрешения пользователя"
 
 #: .\apps\user\models.py:75
 msgid "Specific permissions for this user."
-msgstr ""
-
-#: .\apps\user\models.py:141
-msgid "phone"
-msgstr ""
+msgstr "Конкретные разрешения для этого пользователя."
 
 #: .\apps\user\models.py:145
 msgid "Required. 13 characters. Digits and /+/ only."
-msgstr ""
+msgstr "Обязательно. 13 символов. Только цифры и /+/."
 
 #: .\apps\user\models.py:149
 msgid "A user with that phone already exists."
-msgstr ""
+msgstr "Пользователь с таким телефоном уже существует."
 
 #: .\apps\user\models.py:152
 msgid "first name"
-msgstr ""
+msgstr "имя"
 
 #: .\apps\user\models.py:153
 msgid "last name"
-msgstr ""
+msgstr "фамилия"
 
 #: .\apps\user\models.py:156
 msgid "staff status"
-msgstr ""
+msgstr "статус персонала"
 
 #: .\apps\user\models.py:158
 msgid "Designates whether the user can log into this admin site."
-msgstr ""
+msgstr "Указывает, может ли пользователь войти на этот сайт администратора."
 
 #: .\apps\user\models.py:161
 msgid "active"
-msgstr ""
+msgstr "активный"
 
 #: .\apps\user\models.py:164
 msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
 msgstr ""
+" Указывает, следует ли рассматривать этого пользователя как активного. "
+"Снимите этот флажок вместо удаления учетных записей."
 
 #: .\apps\user\models.py:168
 msgid "date joined"
-msgstr ""
-
-#: .\apps\user\models.py:176
-msgid "user"
-msgstr ""
+msgstr "дата присоединения"
 
 #: .\apps\user\models.py:177
 msgid "users"
-msgstr ""
+msgstr "пользователи"
 
 #: .\apps\user\models.py:207
 msgid "message"
-msgstr ""
-
-#: .\apps\user\models.py:208 .\apps\user\models.py:227
-msgid "created at"
-msgstr ""
+msgstr "сообщение"
 
 #: .\apps\user\models.py:211
 msgid "SMS Code"
-msgstr ""
+msgstr "SMS-код"
 
 #: .\apps\user\models.py:212
 msgid "SMS Codes"
-msgstr ""
+msgstr "SMS-коды"
 
 #: .\apps\user\models.py:223
 msgid "name"
-msgstr ""
-
-#: .\apps\user\models.py:224
-msgid "address"
-msgstr ""
+msgstr "називания"
 
 #: .\apps\user\models.py:225
 msgid "location"
-msgstr ""
+msgstr "местоположение"
 
 #: .\apps\user\models.py:226
 msgid "is default"
-msgstr ""
-
-#: .\apps\user\models.py:228
-msgid "updated at"
-msgstr ""
+msgstr "по умолчанию"
 
 #: .\apps\user\models.py:231
 msgid "Address"
-msgstr ""
+msgstr "Адрес"
 
 #: .\apps\user\models.py:232
 msgid "Addresses"
-msgstr ""
+msgstr "Адреса"
 
 #: .\apps\user\validators.py:10
 msgid ""
 "Enter a valid phone. This value may contain only digits and /+/ character."
 msgstr ""
+" Введите действительный телефон. Это значение может содержать только цифры и "
+"символ /+/."
 
-#: .\core\settings\base.py:123
+#: .\core\settings\base.py:128
 msgid "Russion"
-msgstr ""
+msgstr "Русский"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
 msgid "Messages"
-msgstr ""
+msgstr "Сообщения"
 
 #: .\venv\Lib\site-packages\django\contrib\sitemaps\apps.py:8
 msgid "Site Maps"
-msgstr ""
+msgstr "Карты сайта"
 
 #: .\venv\Lib\site-packages\django\contrib\staticfiles\apps.py:9
 msgid "Static Files"
-msgstr ""
+msgstr "Статические файлы"
 
 #: .\venv\Lib\site-packages\django\contrib\syndication\apps.py:7
 msgid "Syndication"
-msgstr ""
+msgstr "Синдикация"
 
 #. Translators: String used to replace omitted page numbers in elided page
 #. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
@@ -175,48 +581,52 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\paginator.py:32
 msgid "That page number is not an integer"
-msgstr ""
+msgstr "Этот номер страницы не является целым числом"
 
 #: .\venv\Lib\site-packages\django\core\paginator.py:33
 msgid "That page number is less than 1"
-msgstr ""
+msgstr "Этот номер страницы меньше 1"
 
 #: .\venv\Lib\site-packages\django\core\paginator.py:34
 msgid "That page contains no results"
-msgstr ""
+msgstr "Эта страница не содержит результатов"
 
 #: .\venv\Lib\site-packages\django\core\validators.py:22
 msgid "Enter a valid value."
-msgstr ""
+msgstr "Введите действительное значение."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:70
 msgid "Enter a valid domain name."
-msgstr ""
+msgstr "Введите действительное имя домена."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:155
 #: .\venv\Lib\site-packages\django\forms\fields.py:768
 msgid "Enter a valid URL."
-msgstr ""
+msgstr "Введите действительный URL."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:216
 msgid "Enter a valid integer."
-msgstr ""
+msgstr "Введите действительное целое число."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:227
 msgid "Enter a valid email address."
-msgstr ""
+msgstr "Введите действительный адрес электронной почты."
 
 #. Translators: "letters" means latin letters: a-z and A-Z.
 #: .\venv\Lib\site-packages\django\core\validators.py:310
 msgid ""
 "Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
 msgstr ""
+" Введите действительный «слаг», состоящий из букв, цифр, подчеркиваний или "
+"дефисов."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:318
 msgid ""
 "Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
 "hyphens."
 msgstr ""
+" Введите действительный «слаг», состоящий из букв, цифр, подчеркиваний или "
+"дефисов Unicode."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:330
 #: .\venv\Lib\site-packages\django\core\validators.py:339
@@ -574,10 +984,6 @@ msgstr ""
 msgid "File"
 msgstr ""
 
-#: .\venv\Lib\site-packages\django\db\models\fields\files.py:420
-msgid "Image"
-msgstr ""
-
 #: .\venv\Lib\site-packages\django\db\models\fields\json.py:24
 msgid "A JSON object"
 msgstr ""
@@ -735,11 +1141,6 @@ msgid "Please submit at least %(num)d form."
 msgid_plural "Please submit at least %(num)d forms."
 msgstr[0] ""
 msgstr[1] ""
-
-#: .\venv\Lib\site-packages\django\forms\formsets.py:484
-#: .\venv\Lib\site-packages\django\forms\formsets.py:491
-msgid "Order"
-msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\formsets.py:499
 msgid "Delete"

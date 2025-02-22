@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-29 16:39+0500\n"
+"POT-Creation-Date: 2025-02-22 16:31+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,435 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: .\apps\product\admin.py:28 .\apps\product\admin.py:59
-#: .\apps\product\admin.py:90 .\core\settings\base.py:122
+#: .\api\v1\serializers\user.py:27 .\api\v1\serializers\user.py:66
+msgid "Phone number isn't allowed"
+msgstr "Telefon raqami ruxsat etilmagan"
+
+#: .\api\v1\serializers\user.py:34
+msgid "You can only request a code once a minute"
+msgstr "Siz faqat bir minutda bir marta kod jo'nata olasiz"
+
+#: .\api\v1\serializers\user.py:71 .\api\v1\serializers\user.py:86
+msgid "Validation code incorrect"
+msgstr "Tekshiruv kodi noto'g'ri"
+
+#: .\api\v1\serializers\user.py:80
+msgid "Phone number not verified"
+msgstr "Telefon raqami tasdiqlanmagan"
+
+#: .\api\v1\serializers\user.py:83
+msgid "Verification timed out"
+msgstr "Tekshiruv vaqti tugadi"
+
+#: .\api\v1\views\user.py:27
+msgid "The verification code has been sent"
+msgstr "Tekshiruv kodi jo'natildi"
+
+#: .\apps\feedback\models.py:10 .\apps\feedback\models.py:28
+#: .\apps\market\models.py:21 .\apps\market\models.py:39
+#: .\apps\user\models.py:176
+msgid "user"
+msgstr "Foydalanuvchi"
+
+#: .\apps\feedback\models.py:11 .\apps\market\models.py:8
+#, fuzzy
+#| msgid "Product"
+msgid "product"
+msgstr "Mahsulot"
+
+#: .\apps\feedback\models.py:12
+msgid "reply to"
+msgstr ""
+
+#: .\apps\feedback\models.py:13
+msgid "rate"
+msgstr "reyting"
+
+#: .\apps\feedback\models.py:15 .\apps\feedback\models.py:31
+msgid "text"
+msgstr "Matn"
+
+#: .\apps\feedback\models.py:16 .\apps\landing\models.py:19
+#: .\apps\landing\models.py:36 .\apps\landing\models.py:54
+#: .\apps\landing\models.py:68 .\apps\landing\models.py:84
+#: .\apps\landing\models.py:130 .\apps\market\models.py:49
+#: .\apps\product\models.py:11 .\apps\product\models.py:27
+#: .\apps\product\models.py:80 .\apps\user\models.py:208
+#: .\apps\user\models.py:227
+msgid "created at"
+msgstr "Yaratilgan vaqti"
+
+#: .\apps\feedback\models.py:17 .\apps\feedback\models.py:32
+#: .\apps\landing\models.py:20 .\apps\landing\models.py:37
+#: .\apps\landing\models.py:55 .\apps\landing\models.py:69
+#: .\apps\landing\models.py:85 .\apps\landing\models.py:131
+#: .\apps\market\models.py:50 .\apps\product\models.py:12
+#: .\apps\product\models.py:28 .\apps\product\models.py:81
+#: .\apps\user\models.py:228
+msgid "updated at"
+msgstr "O'zgartirilgan vaqti"
+
+#: .\apps\feedback\models.py:23
+msgid "Comment"
+msgstr "Sharh"
+
+#: .\apps\feedback\models.py:24
+msgid "Comments"
+msgstr "Sharhlar"
+
+#: .\apps\feedback\models.py:29 .\apps\user\models.py:141
+#: .\apps\user\models.py:206
+msgid "phone"
+msgstr "telefon raqami"
+
+#: .\apps\feedback\models.py:30
+msgid "full name"
+msgstr "familiyasi"
+
+#: .\apps\feedback\models.py:38
+msgid "Feedback"
+msgstr "Qayta aloqa"
+
+#: .\apps\feedback\models.py:39
+msgid "Feedbacks"
+msgstr "Qayta aloqalar"
+
+#: .\apps\landing\admin.py:34
+msgid "Short Body"
+msgstr "Qisqa matn"
+
+#: .\apps\landing\admin.py:38 .\apps\landing\admin.py:61
+#: .\apps\landing\admin.py:79 .\apps\landing\admin.py:117
+#: .\apps\product\admin.py:35 .\apps\product\admin.py:72
+#: .\apps\product\admin.py:141 .\core\settings\base.py:127
 msgid "Uzbek"
 msgstr "Ozbekcha"
 
-#: .\apps\product\admin.py:34 .\apps\product\admin.py:65
-#: .\apps\product\admin.py:97
+#: .\apps\landing\admin.py:39 .\apps\landing\admin.py:62
+#: .\apps\landing\admin.py:80 .\apps\landing\admin.py:118
+#: .\apps\product\admin.py:41 .\apps\product\admin.py:78
+#: .\apps\product\admin.py:148
 msgid "Russian"
 msgstr "Ruscha"
+
+#: .\apps\landing\admin.py:40 .\apps\landing\admin.py:63
+#: .\apps\landing\admin.py:81 .\apps\landing\admin.py:119
+#: .\apps\product\admin.py:47 .\apps\product\admin.py:84
+#: .\apps\product\admin.py:155 .\core\settings\base.py:129
+msgid "English"
+msgstr "Inglizcha"
+
+#: .\apps\landing\admin.py:42 .\apps\landing\admin.py:65
+#: .\apps\landing\admin.py:83 .\apps\landing\admin.py:97
+#: .\apps\landing\admin.py:121 .\apps\landing\admin.py:136
+msgid "Date Information"
+msgstr "Vaqt ma'lumotlari"
+
+#: .\apps\landing\admin.py:57
+msgid "Description"
+msgstr "Izoh"
+
+#: .\apps\landing\models.py:9 .\apps\landing\models.py:31
+#: .\apps\landing\models.py:48 .\apps\landing\models.py:66
+#: .\apps\product\models.py:10
+msgid "image"
+msgstr "Rasm"
+
+#: .\apps\landing\models.py:10
+msgid "short body uz"
+msgstr "Qisqa matn (uz)"
+
+#: .\apps\landing\models.py:11
+msgid "short body ru"
+msgstr "Qisqa matn (ru)"
+
+#: .\apps\landing\models.py:12
+msgid "short body en"
+msgstr "Qisqa matn (en)"
+
+#: .\apps\landing\models.py:13 .\apps\landing\models.py:32
+msgid "body uz"
+msgstr "Matn (uz)"
+
+#: .\apps\landing\models.py:14 .\apps\landing\models.py:33
+msgid "body ru"
+msgstr "Matn (ru)"
+
+#: .\apps\landing\models.py:15 .\apps\landing\models.py:34
+msgid "body en"
+msgstr "Matn (en)"
+
+#: .\apps\landing\models.py:16 .\apps\landing\models.py:127
+msgid "url"
+msgstr "URL"
+
+#: .\apps\landing\models.py:17 .\apps\landing\models.py:52
+#: .\apps\landing\models.py:128 .\apps\product\models.py:79
+msgid "is active"
+msgstr "aktiv"
+
+#: .\apps\landing\models.py:26
+msgid "Post"
+msgstr "Post"
+
+#: .\apps\landing\models.py:27
+msgid "Posts"
+msgstr "Postlar"
+
+#: .\apps\landing\models.py:43
+msgid "Certificate"
+msgstr "Sertifikat"
+
+#: .\apps\landing\models.py:44
+msgid "Certificates"
+msgstr "Sertifikatlar"
+
+#: .\apps\landing\models.py:49
+msgid "full name uz"
+msgstr "To'liq ismi (uz)"
+
+#: .\apps\landing\models.py:50
+msgid "full name ru"
+msgstr "To'liq ismi (ru)"
+
+#: .\apps\landing\models.py:51
+msgid "full name en"
+msgstr "To'liq ismi (en)"
+
+#: .\apps\landing\models.py:61
+msgid "Star"
+msgstr "Yulduz"
+
+#: .\apps\landing\models.py:62
+msgid "Stars"
+msgstr "Yulduzlar"
+
+#: .\apps\landing\models.py:72
+msgid "Result"
+msgstr "Natija"
+
+#: .\apps\landing\models.py:73
+msgid "Results"
+msgstr "Natijalar"
+
+#: .\apps\landing\models.py:77
+msgid "question uz"
+msgstr "Savol (uz)"
+
+#: .\apps\landing\models.py:78
+msgid "question ru"
+msgstr "Savol (ru)"
+
+#: .\apps\landing\models.py:79
+msgid "question en"
+msgstr "Savol (en)"
+
+#: .\apps\landing\models.py:80
+msgid "answer uz"
+msgstr "Javob (uz)"
+
+#: .\apps\landing\models.py:81
+msgid "answer ru"
+msgstr "Javob (ru)"
+
+#: .\apps\landing\models.py:82
+msgid "answer en"
+msgstr "Javob (en)"
+
+#: .\apps\landing\models.py:91 .\apps\landing\models.py:92
+msgid "FAQ"
+msgstr "FAQ"
+
+#: .\apps\landing\models.py:97
+msgid "source"
+msgstr "Manba"
+
+#: .\apps\landing\models.py:106
+msgid "source md"
+msgstr "Manba (planshet)"
+
+#: .\apps\landing\models.py:117
+msgid "source sm"
+msgstr "Manba (smartfon)"
+
+#: .\apps\landing\models.py:137
+msgid "Banner"
+msgstr "Banner"
+
+#: .\apps\landing\models.py:138
+msgid "Banners"
+msgstr "Bannerlar"
+
+#: .\apps\market\models.py:9 .\apps\product\models.py:75
+msgid "count"
+msgstr "soni"
+
+#: .\apps\market\models.py:10 .\apps\product\models.py:69
+msgid "price"
+msgstr "narxi"
+
+#: .\apps\market\models.py:16
+msgid "Item"
+msgstr "Mahsulot"
+
+#: .\apps\market\models.py:17
+msgid "Items"
+msgstr "Mahsulotlar"
+
+#: .\apps\market\models.py:22 .\apps\market\models.py:40
+#, fuzzy
+#| msgid "Products"
+msgid "products"
+msgstr "Mahsulotlar"
+
+#: .\apps\market\models.py:28
+msgid "Cart"
+msgstr "Savat"
+
+#: .\apps\market\models.py:29
+msgid "Carts"
+msgstr "Savatlar"
+
+#: .\apps\market\models.py:41
+#, fuzzy
+#| msgid "price"
+msgid "total price"
+msgstr "narxi"
+
+#: .\apps\market\models.py:42
+msgid "amount"
+msgstr "Miqdori"
+
+#: .\apps\market\models.py:43
+msgid "description"
+msgstr "Izoh"
+
+#: .\apps\market\models.py:45
+msgid "delivery"
+msgstr "yetkazib berish"
+
+#: .\apps\market\models.py:46 .\apps\user\models.py:224
+msgid "address"
+msgstr "Manzil"
+
+#: .\apps\market\models.py:47
+msgid "status"
+msgstr "adminlik holati"
+
+#: .\apps\market\models.py:56
+#: .\venv\Lib\site-packages\django\forms\formsets.py:484
+#: .\venv\Lib\site-packages\django\forms\formsets.py:491
+msgid "Order"
+msgstr "Buyurtma"
+
+#: .\apps\market\models.py:57
+msgid "Orders"
+msgstr "Buyurtmalar"
+
+#: .\apps\product\admin.py:53 .\apps\product\admin.py:90
+#: .\apps\product\admin.py:178
+msgid "Date information"
+msgstr "Vaqt ma'lumotlari"
+
+#: .\apps\product\models.py:7 .\apps\product\models.py:24
+#: .\apps\product\models.py:56
+msgid "name uz"
+msgstr "Nomi (uz)"
+
+#: .\apps\product\models.py:8 .\apps\product\models.py:25
+#: .\apps\product\models.py:57
+msgid "name ru"
+msgstr "Nomi (ru)"
+
+#: .\apps\product\models.py:9 .\apps\product\models.py:26
+#: .\apps\product\models.py:58
+msgid "name en"
+msgstr "Nomi (en)"
+
+#: .\apps\product\models.py:13
+msgid "parent"
+msgstr ""
+
+#: .\apps\product\models.py:19 .\apps\product\models.py:66
+msgid "Category"
+msgstr "Kategoriya"
+
+#: .\apps\product\models.py:20
+msgid "Categories"
+msgstr "Kategoriyalar"
+
+#: .\apps\product\models.py:34
+msgid "Tag"
+msgstr "Teg"
+
+#: .\apps\product\models.py:35 .\apps\product\models.py:67
+msgid "Tags"
+msgstr "Teglar"
+
+#: .\apps\product\models.py:43
+msgid "Product Image"
+msgstr "Mahsulotning rasm"
+
+#: .\apps\product\models.py:44
+msgid "Product Image Status"
+msgstr "Mahsulotning rasm holati"
+
+#: .\apps\product\models.py:50
+#: .\venv\Lib\site-packages\django\db\models\fields\files.py:420
+msgid "Image"
+msgstr "Rasm"
+
+#: .\apps\product\models.py:51 .\apps\product\models.py:73
+msgid "Images"
+msgstr "Rasmlar"
+
+#: .\apps\product\models.py:59
+msgid "short description uz"
+msgstr "Qisqa matn (uz)"
+
+#: .\apps\product\models.py:60
+msgid "short description ru"
+msgstr "Qisqa matn (ru)"
+
+#: .\apps\product\models.py:61
+msgid "short description en"
+msgstr "Qisqa matn (en)"
+
+#: .\apps\product\models.py:62
+msgid "description uz"
+msgstr "Matn (uz)"
+
+#: .\apps\product\models.py:63
+msgid "description ru"
+msgstr "Matn (ru)"
+
+#: .\apps\product\models.py:64
+msgid "description en"
+msgstr "Matn (en)"
+
+#: .\apps\product\models.py:70
+msgid "discount"
+msgstr "chegirma"
+
+#: .\apps\product\models.py:71
+msgid "discounted price"
+msgstr "chegirmadagi narxi"
+
+#: .\apps\product\models.py:76
+msgid "hit count"
+msgstr "ko'rishlar soni"
+
+#: .\apps\product\models.py:77
+msgid "sold count"
+msgstr "sotilganlar soni"
+
+#: .\apps\product\models.py:87
+msgid "Product"
+msgstr "Mahsulot"
+
+#: .\apps\product\models.py:88
+msgid "Products"
+msgstr "Mahsulotlar"
 
 #: .\apps\user\models.py:64
 msgid "superuser status"
@@ -37,6 +457,8 @@ msgid ""
 "Designates that this user has all permissions without explicitly assigning "
 "them."
 msgstr ""
+"Bu foydalanuvchiga maxsus ruxsatlar berilmagan holda barcha ruxsatlar "
+"berilgan."
 
 #: .\apps\user\models.py:73
 msgid "user permissions"
@@ -44,19 +466,15 @@ msgstr "User ruxsatlari"
 
 #: .\apps\user\models.py:75
 msgid "Specific permissions for this user."
-msgstr ""
-
-#: .\apps\user\models.py:141
-msgid "phone"
-msgstr "telefon raqami"
+msgstr "Foydalanuvchi uchun maxsus ruxsatlar."
 
 #: .\apps\user\models.py:145
 msgid "Required. 13 characters. Digits and /+/ only."
-msgstr ""
+msgstr "Talab qilinadi. 13 ta belgi. Faqat raqamlar va /+/."
 
 #: .\apps\user\models.py:149
 msgid "A user with that phone already exists."
-msgstr ""
+msgstr "Ushbu telefon raqamli foydalanuvchi allaqachon mavjud."
 
 #: .\apps\user\models.py:152
 msgid "first name"
@@ -73,6 +491,7 @@ msgstr "adminlik holati"
 #: .\apps\user\models.py:158
 msgid "Designates whether the user can log into this admin site."
 msgstr ""
+"Foydalanuvchi bu admin saytiga kirishga ruxsat berilganligini belgilaydi."
 
 #: .\apps\user\models.py:161
 msgid "active"
@@ -83,83 +502,71 @@ msgid ""
 "Designates whether this user should be treated as active. Unselect this "
 "instead of deleting accounts."
 msgstr ""
+"Bu foydalanuvchining faol hisoblanishi kerakligini belgilaydi. Hisobni "
+"o'chirish o'rniga bu belgilanadi."
 
 #: .\apps\user\models.py:168
 msgid "date joined"
-msgstr ""
-
-#: .\apps\user\models.py:176
-msgid "user"
-msgstr ""
+msgstr "Qo'shilgan sana"
 
 #: .\apps\user\models.py:177
 msgid "users"
-msgstr ""
+msgstr "Foydalanuvchilar"
 
 #: .\apps\user\models.py:207
 msgid "message"
-msgstr ""
-
-#: .\apps\user\models.py:208 .\apps\user\models.py:227
-msgid "created at"
-msgstr ""
+msgstr "Xabar"
 
 #: .\apps\user\models.py:211
 msgid "SMS Code"
-msgstr ""
+msgstr "SMS kod"
 
 #: .\apps\user\models.py:212
 msgid "SMS Codes"
-msgstr ""
+msgstr "SMS kodlar"
 
 #: .\apps\user\models.py:223
 msgid "name"
-msgstr ""
-
-#: .\apps\user\models.py:224
-msgid "address"
-msgstr ""
+msgstr "Nomi"
 
 #: .\apps\user\models.py:225
 msgid "location"
-msgstr ""
+msgstr "Joylashuv"
 
 #: .\apps\user\models.py:226
 msgid "is default"
-msgstr ""
-
-#: .\apps\user\models.py:228
-msgid "updated at"
-msgstr ""
+msgstr "Asosiy"
 
 #: .\apps\user\models.py:231
 msgid "Address"
-msgstr ""
+msgstr "Manzil"
 
 #: .\apps\user\models.py:232
 msgid "Addresses"
-msgstr ""
+msgstr "Manzillar"
 
 #: .\apps\user\validators.py:10
 msgid ""
 "Enter a valid phone. This value may contain only digits and /+/ character."
 msgstr ""
+"To'g'ri telefon raqamini kiriting. Bu qiymat faqat raqamlar va /+/ belgisini "
+"o'z ichiga olishi mumkin."
 
-#: .\core\settings\base.py:123
+#: .\core\settings\base.py:128
 msgid "Russion"
 msgstr "Ruscha"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:16
 msgid "Messages"
-msgstr ""
+msgstr "Xabarlar"
 
 #: .\venv\Lib\site-packages\django\contrib\sitemaps\apps.py:8
 msgid "Site Maps"
-msgstr ""
+msgstr "Sayt xaritalari"
 
 #: .\venv\Lib\site-packages\django\contrib\staticfiles\apps.py:9
 msgid "Static Files"
-msgstr ""
+msgstr "Statik fayllar"
 
 #: .\venv\Lib\site-packages\django\contrib\syndication\apps.py:7
 msgid "Syndication"
@@ -173,36 +580,36 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\paginator.py:32
 msgid "That page number is not an integer"
-msgstr ""
+msgstr "Ushbu sahifa raqami butun son emas"
 
 #: .\venv\Lib\site-packages\django\core\paginator.py:33
 msgid "That page number is less than 1"
-msgstr ""
+msgstr "Sahifa raqami 1 dan kichik"
 
 #: .\venv\Lib\site-packages\django\core\paginator.py:34
 msgid "That page contains no results"
-msgstr ""
+msgstr "Ushbu sahifada natija yo'q"
 
 #: .\venv\Lib\site-packages\django\core\validators.py:22
 msgid "Enter a valid value."
-msgstr ""
+msgstr "To'g'ri qiymatni kiriting."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:70
 msgid "Enter a valid domain name."
-msgstr ""
+msgstr "To'g'ri domen nomini kiriting."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:155
 #: .\venv\Lib\site-packages\django\forms\fields.py:768
 msgid "Enter a valid URL."
-msgstr ""
+msgstr "To'g'ri URL ni kiriting."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:216
 msgid "Enter a valid integer."
-msgstr ""
+msgstr "To'g'ri butun sonni kiriting."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:227
 msgid "Enter a valid email address."
-msgstr ""
+msgstr "To'g'ri elektron pochta manzilini kiriting."
 
 #. Translators: "letters" means latin letters: a-z and A-Z.
 #: .\venv\Lib\site-packages\django\core\validators.py:310
@@ -239,7 +646,7 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:396
 msgid "Enter only digits separated by commas."
-msgstr ""
+msgstr "To'g'ri raqamlarni vergullar bilan ajratilgan shaklda kiriting."
 
 #: .\venv\Lib\site-packages\django\core\validators.py:402
 #, python-format
@@ -572,10 +979,6 @@ msgstr ""
 msgid "File"
 msgstr ""
 
-#: .\venv\Lib\site-packages\django\db\models\fields\files.py:420
-msgid "Image"
-msgstr ""
-
 #: .\venv\Lib\site-packages\django\db\models\fields\json.py:24
 msgid "A JSON object"
 msgstr ""
@@ -733,11 +1136,6 @@ msgid "Please submit at least %(num)d form."
 msgid_plural "Please submit at least %(num)d forms."
 msgstr[0] ""
 msgstr[1] ""
-
-#: .\venv\Lib\site-packages\django\forms\formsets.py:484
-#: .\venv\Lib\site-packages\django\forms\formsets.py:491
-msgid "Order"
-msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\formsets.py:499
 msgid "Delete"

@@ -28,7 +28,11 @@ class ProductFilter(django_filters.FilterSet):
         lookup_expr='icontains',
         field_name='name_ru'
     )
+    name_en = django_filters.CharFilter(
+        lookup_expr='icontains',
+        field_name='name_en'
+    )
 
     class Meta:
         model = Product
-        fields = ['category', 'tags', 'name_uz', 'name_ru', 'tag', 'min_price', 'max_price', ]
+        fields = ['category', 'tags', 'name_uz', 'name_ru', 'name_en', 'tag', 'min_price', 'max_price', ]
