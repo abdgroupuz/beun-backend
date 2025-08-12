@@ -74,7 +74,7 @@ class AddressViewSet(viewsets.ModelViewSet):
     authentication_classes = (JWTCookieAuthentication,)
 
     def get_queryset(self):
-        return self.queryset.filter(user=self.request.user)
+        return self.queryset.filter(user=self.request.user.id)
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)

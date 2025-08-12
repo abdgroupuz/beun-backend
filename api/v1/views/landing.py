@@ -1,4 +1,4 @@
-from rest_framework.viewsets import ReadOnlyModelViewSet, ViewSet
+from rest_framework.viewsets import ReadOnlyModelViewSet, GenericViewSet
 from rest_framework.mixins import ListModelMixin
 
 from api.v1.serializers.landing import (
@@ -37,6 +37,6 @@ class StarViewSet(ReadOnlyModelViewSet):
     serializer_class = StarSerializer
 
 
-class BannerViewSet(ViewSet, ListModelMixin):
+class BannerViewSet(GenericViewSet, ListModelMixin):
     queryset = Banner.objects.all()
     serializer_class = BannerSerializer
