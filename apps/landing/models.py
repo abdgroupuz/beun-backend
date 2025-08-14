@@ -147,7 +147,7 @@ class SpecialOffer(models.Model):
     updated_at = models.DateTimeField(_("updated at"), auto_now=True)
 
     def __str__(self):
-        return f"Special Offer for {self.product.name}"
+        return f"Special Offer for {self.product.name_en}"
 
     class Meta:
         verbose_name = _("Special Offer")
