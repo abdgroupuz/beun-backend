@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
-from .models import Post, Certificate, Star, Result, Faq, Banner
+from .models import Post, Certificate, Star, Result, Faq, Banner, SpecialOffer
 
 # Register your models here.
 
@@ -132,6 +132,20 @@ class BannerAdmin(admin.ModelAdmin):
 
     fieldsets = (
         (None, {"fields": ("source", "source_md", "source_sm", "url", "is_active")}),
+        (
+            _("Date Information"),
+            {"fields": ("created_at", "updated_at"), "classes": ("collapse",)},
+        ),
+    )
+
+@admin.register(SpecialOffer)
+class SpecialOfferAdmin(admin.ModelAdmin):
+    list_display = ["id", "product", "photo", "end_date"]
+    list_editable = ["end_date"]
+    readonly_fields = ["created_at", "updated_at"]
+
+    fieldsets = (
+        (None, {"fields": ("product", "photo", "end_date")}),
         (
             _("Date Information"),
             {"fields": ("created_at", "updated_at"), "classes": ("collapse",)},
