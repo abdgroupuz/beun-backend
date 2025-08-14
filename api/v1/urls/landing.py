@@ -6,6 +6,7 @@ from api.v1.views.landing import (
     ResultViewSet,
     StarViewSet,
     BannerViewSet,
+    SpecialOfferViewSet
 )
 
 router = DefaultRouter()
@@ -15,6 +16,6 @@ router.register("landing/posts", PostViewSet)
 router.register("landing/results", ResultViewSet)
 router.register("landing/stars", StarViewSet)
 router.register("landing/banners", BannerViewSet)
-
+router.register("landing/special-offers", SpecialOfferViewSet, basename="special-offers")
 
 urlpatterns = router.urls

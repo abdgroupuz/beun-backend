@@ -136,3 +136,19 @@ class Banner(models.Model):
     class Meta:
         verbose_name = _("Banner")
         verbose_name_plural = _("Banners")
+
+
+class SpecialOffer(models.Model):
+    product = models.ForeignKey("product.Product", on_delete=models.CASCADE)
+    end_date = models.DateTimeField(_("end date"))
+    photo = models.ImageField(_("photo"), upload_to="special_offers/")
+
+    created_at = models.DateTimeField(_("created at"), auto_now_add=True)
+    updated_at = models.DateTimeField(_("updated at"), auto_now=True)
+
+    def __str__(self):
+        return f"Special Offer for {self.product.name}"
+
+    class Meta:
+        verbose_name = _("Special Offer")
+        verbose_name_plural = _("Special Offers")

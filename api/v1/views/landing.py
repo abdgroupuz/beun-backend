@@ -8,8 +8,9 @@ from api.v1.serializers.landing import (
     ResultSerializer,
     StarSerializer,
     BannerSerializer,
+    SpecialOfferSerializer
 )
-from apps.landing.models import Certificate, Faq, Post, Result, Star, Banner
+from apps.landing.models import Certificate, Faq, Post, Result, Star, Banner, SpecialOffer
 
 
 class CertificateViewSet(ReadOnlyModelViewSet):
@@ -40,3 +41,8 @@ class StarViewSet(ReadOnlyModelViewSet):
 class BannerViewSet(GenericViewSet, ListModelMixin):
     queryset = Banner.objects.all()
     serializer_class = BannerSerializer
+
+
+class SpecialOfferViewSet(GenericViewSet, ListModelMixin):
+    queryset = SpecialOffer.objects.all()
+    serializer_class = SpecialOfferSerializer
