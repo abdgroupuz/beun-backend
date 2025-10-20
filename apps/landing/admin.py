@@ -70,7 +70,8 @@ class CertificateAdmin(admin.ModelAdmin):
 
 @admin.register(Star)
 class StarAdmin(admin.ModelAdmin):
-    list_display = ["id", "full_name_ru", "is_active", "created_at", "updated_at"]
+    list_display = ["id", "full_name_ru",
+                    "is_active", "created_at", "updated_at"]
     search_fields = ["full_name_uz", "full_name_ru", "full_name_en"]
     readonly_fields = ["created_at", "updated_at"]
 
@@ -126,17 +127,24 @@ class FaqAdmin(admin.ModelAdmin):
 
 @admin.register(Banner)
 class BannerAdmin(admin.ModelAdmin):
-    list_display = ["id", "url", "source", "is_active"]
+    list_display = ["id", "url", "source_uz",
+                    "source_ru", "source_en", "is_active"]
     list_editable = ["is_active"]
     readonly_fields = ["created_at", "updated_at"]
 
     fieldsets = (
-        (None, {"fields": ("source", "source_md", "source_sm", "url", "is_active")}),
+        (None, {"fields": ("url", "is_active")}),
+        (_("Desktop"), {"fields": ("source_uz", "source_ru", "source_en")}),
+        (_("Tablet"), {"fields": ("source_md_uz",
+         "source_md_ru", "source_md_en")}),
+        (_("Mobile"), {"fields": ("source_sm_uz",
+         "source_sm_ru", "source_sm_en")}),
         (
             _("Date Information"),
             {"fields": ("created_at", "updated_at"), "classes": ("collapse",)},
         ),
     )
+
 
 @admin.register(SpecialOffer)
 class SpecialOfferAdmin(admin.ModelAdmin):

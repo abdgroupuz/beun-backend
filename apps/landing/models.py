@@ -93,8 +93,8 @@ class Faq(models.Model):
 
 
 class Banner(models.Model):
-    source = models.FileField(
-        _("source"),
+    source_uz = models.FileField(
+        _("source uz"),
         upload_to="banners/",
         validators=[
             FileExtensionValidator(
@@ -102,8 +102,26 @@ class Banner(models.Model):
             )
         ],
     )
-    source_md = models.FileField(
-        _("source md"),
+    source_ru = models.FileField(
+        _("source ru"),
+        upload_to="banners/",
+        validators=[
+            FileExtensionValidator(
+                allowed_extensions=["mp4", "webm", "mov", "jpg", "jpeg", "png", "gif"]
+            )
+        ],
+    )
+    source_en = models.FileField(
+        _("source en"),
+        upload_to="banners/",
+        validators=[
+            FileExtensionValidator(
+                allowed_extensions=["mp4", "webm", "mov", "jpg", "jpeg", "png", "gif"]
+            )
+        ],
+    )
+    source_md_uz = models.FileField(
+        _("source md uz"),
         upload_to="banners/",
         blank=True,
         null=True,
@@ -113,8 +131,52 @@ class Banner(models.Model):
             )
         ],
     )
-    source_sm = models.FileField(
-         _("source sm"),
+    source_md_ru = models.FileField(
+        _("source md ru"),
+        upload_to="banners/",
+        blank=True,
+        null=True,
+        validators=[
+            FileExtensionValidator(
+                allowed_extensions=["mp4", "webm", "mov", "jpg", "jpeg", "png", "gif"]
+            )
+        ],
+    )
+    source_md_en = models.FileField(
+        _("source md en"),
+        upload_to="banners/",
+        blank=True,
+        null=True,
+        validators=[
+            FileExtensionValidator(
+                allowed_extensions=["mp4", "webm", "mov", "jpg", "jpeg", "png", "gif"]
+            )
+        ],
+    )
+    source_sm_uz = models.FileField(
+         _("source sm uz"),
+        upload_to="banners/",
+        blank=True,
+        null=True,
+        validators=[
+            FileExtensionValidator(
+                allowed_extensions=["mp4", "webm", "mov", "jpg", "jpeg", "png", "gif"]
+            )
+        ],
+    )
+    source_sm_ru = models.FileField(
+         _("source sm ru"),
+        upload_to="banners/",
+        blank=True,
+        null=True,
+        validators=[
+            FileExtensionValidator(
+                allowed_extensions=["mp4", "webm", "mov", "jpg", "jpeg", "png", "gif"]
+            )
+        ],
+    )
+    source_sm_en = models.FileField(
+         _("source sm en"),
         upload_to="banners/",
         blank=True,
         null=True,
@@ -131,7 +193,7 @@ class Banner(models.Model):
     updated_at = models.DateTimeField(_("updated at"), auto_now=True)
 
     def __str__(self):
-        return self.source.name
+        return self.source_ru.name
 
     class Meta:
         verbose_name = _("Banner")
