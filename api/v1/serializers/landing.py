@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from apps.landing.models import Certificate, Faq, Post, Result, Star, Banner, SpecialOffer
+from apps.landing.models import Certificate, Faq, Post, Result, Star, Banner, Award, SpecialOffer
 from api.v1.serializers.product import ProductSerializer
 
 
@@ -36,6 +36,12 @@ class StarSerializer(serializers.ModelSerializer):
 class BannerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Banner
+        fields = "__all__"
+
+
+class AwardSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Award
         fields = "__all__"
 
 

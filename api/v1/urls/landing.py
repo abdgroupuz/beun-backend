@@ -6,10 +6,12 @@ from api.v1.views.landing import (
     ResultViewSet,
     StarViewSet,
     BannerViewSet,
+    AwardViewSet,
     SpecialOfferViewSet
 )
 
 router = DefaultRouter()
+router.register("landing/awards", AwardViewSet)
 router.register("landing/certificates", CertificateViewSet)
 router.register("landing/faqs", FaqViewSet)
 router.register("landing/posts", PostViewSet)

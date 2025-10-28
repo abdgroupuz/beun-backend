@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
-from .models import Post, Certificate, Star, Result, Faq, Banner, SpecialOffer
+from .models import Post, Certificate, Star, Result, Faq, Banner, SpecialOffer, Award
 
 # Register your models here.
 
@@ -139,6 +139,23 @@ class BannerAdmin(admin.ModelAdmin):
          "source_md_ru", "source_md_en")}),
         (_("Mobile"), {"fields": ("source_sm_uz",
          "source_sm_ru", "source_sm_en")}),
+        (
+            _("Date Information"),
+            {"fields": ("created_at", "updated_at"), "classes": ("collapse",)},
+        ),
+    )
+
+
+@admin.register(Award)
+class AwardAdmin(admin.ModelAdmin):
+    list_display = ["id", "created_at", "updated_at"]
+    readonly_fields = ["created_at", "updated_at"]
+
+    fieldsets = (
+        (None, {"fields": ("image", "thumbnail")}),
+        (_("Uzbek"), {"fields": ("title_uz", "description_uz")}),
+        (_("Russian"), {"fields": ("title_ru", "description_ru")}),
+        (_("English"), {"fields": ("title_en", "description_en")}),
         (
             _("Date Information"),
             {"fields": ("created_at", "updated_at"), "classes": ("collapse",)},

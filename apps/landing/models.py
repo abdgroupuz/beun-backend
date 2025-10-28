@@ -200,6 +200,27 @@ class Banner(models.Model):
         verbose_name_plural = _("Banners")
 
 
+class Award(models.Model):
+    image = models.ImageField(_("image"), upload_to="awards/")
+    thumbnail = models.ImageField(_("thumbnail"), upload_to="awards/thumbnails/")
+    title_uz = models.CharField(_("title uz"), max_length=255, blank=True)
+    title_ru = models.CharField(_("title ru"), max_length=255, blank=True)
+    title_en = models.CharField(_("title en"), max_length=255, blank=True)
+    description_uz = models.TextField(_("description uz"), blank=True)
+    description_ru = models.TextField(_("description ru"), blank=True)
+    description_en = models.TextField(_("description en"), blank=True)
+
+    created_at = models.DateTimeField(_("created at"), auto_now_add=True)
+    updated_at = models.DateTimeField(_("updated at"), auto_now=True)
+
+    def __str__(self):
+        return self.title_ru
+
+    class Meta:
+        verbose_name = _("Award")
+        verbose_name_plural = _("Awards")
+
+
 class SpecialOffer(models.Model):
     product = models.ForeignKey("product.Product", on_delete=models.CASCADE)
     end_date = models.DateTimeField(_("end date"))
